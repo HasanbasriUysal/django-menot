@@ -3,19 +3,36 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-class Document(models.Model):
+class TimestampModel(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        abstract = True
+
+
+class OwnedModel(models.Model):
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+
+class Document(TimestampModel, OwnedModel):
     class Type(models.TextChoices):
         BILL = ("BILL", _("Lasku"))
         RECEIPT = ("RECEIPT", _("Kuitti"))
         CALCULATION = ("CALCULATION", _("Laskelma"))
         OTHER = ("OTHER", _("Muu"))
 
-    created_at = models.DateTimeField(auto_now_add=True)
     type = models.CharField(max_length=20, choices=Type.choices)
     file = models.FileField(upload_to="docs/%Y-%M/")
+    
 
-
-class Category(models.Model):
+class Category(OwnedModel):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey(
         "self",
@@ -24,22 +41,14 @@ class Category(models.Model):
         related_name="children",
         on_delete=models.CASCADE,
     )
-    owner = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-    )
+   
 
-
-class Account(models.Model):
-    owner = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-    )
+class Account(OwnedModel):    
     name = models.CharField(max_length=100)
     bank_account = models.CharField(max_length=50, null=True, blank=True)
 
 
-class Transaction(models.Model):
+class Transaction(TimestampModel):
     class Type(models.TextChoices):     
         INCOME = ("INCOME", _("Tulo"))
         EXPENSE = ("EXPENSE", _("Meno"))
@@ -48,7 +57,6 @@ class Transaction(models.Model):
         UPCOMING = ("UPCOMING", _("Tuleva"))
         DONE = ("DONE", _("Tapahtunut"))
 
-    created_at = models.DateTimeField(auto_now_add=True)
     account = models.ForeignKey(Account, on_delete=models.RESTRICT)
     type = models.CharField(max_length=20, choices=Type.choices)
     state = models.CharField(max_length=20, choices=State.choices)
