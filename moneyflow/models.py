@@ -20,7 +20,6 @@ class OwnedModel(models.Model):
         abstract = True
 
 
-
 class Document(TimestampModel, OwnedModel):
     class Type(models.TextChoices):
         BILL = ("BILL", _("Lasku"))
@@ -32,7 +31,7 @@ class Document(TimestampModel, OwnedModel):
     file = models.FileField(upload_to="docs/%Y-%M/")
     
 
-class Category(OwnedModel):
+class Category(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey(
         "self",
@@ -43,7 +42,7 @@ class Category(OwnedModel):
     )
    
 
-class Account(OwnedModel):    
+class Account(TimestampModel, OwnedModel):    
     name = models.CharField(max_length=100)
     bank_account = models.CharField(max_length=50, null=True, blank=True)
 
