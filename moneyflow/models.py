@@ -39,9 +39,10 @@ class Category(TimestampModel, OwnedModel):
         "self",
         blank=True,
         null=True,
-        related_name="subcategorie",
+        related_name="subcategories",
         on_delete=models.CASCADE,
-    )   
+    )
+   
 
 class Account(TimestampModel, OwnedModel):    
     name = models.CharField(max_length=100)
@@ -70,8 +71,6 @@ class Transaction(TimestampModel):
         related_name="transactions",
         blank=True,
     )
-   
-
 
     
 
