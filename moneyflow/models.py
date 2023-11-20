@@ -32,13 +32,14 @@ class Document(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100,blank=True)
     file = models.FileField(upload_to="docs/%Y-%M/")
     
+    
 class Category(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey(
         "self",
         blank=True,
         null=True,
-        related_name="children",
+        related_name="subcategories",
         on_delete=models.CASCADE,
     )
    
