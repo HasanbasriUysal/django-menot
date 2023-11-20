@@ -22,15 +22,16 @@ class OwnedModel(models.Model):
 
 class Document(TimestampModel, OwnedModel):
     class Type(models.TextChoices):
+        #KOODI_NIMI = ("TIETOKANTAAN TALLENNETTAVA", _("Kayttajalle nakyva"))
         BILL = ("BILL", _("Lasku"))
         RECEIPT = ("RECEIPT", _("Kuitti"))
         CALCULATION = ("CALCULATION", _("Laskelma"))
         OTHER = ("OTHER", _("Muu"))
 
     type = models.CharField(max_length=20, choices=Type.choices)
+    name = models.CharField(max_length=100,blank=True)
     file = models.FileField(upload_to="docs/%Y-%M/")
     
-
 class Category(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey(
@@ -60,6 +61,7 @@ class Transaction(TimestampModel):
     type = models.CharField(max_length=20, choices=Type.choices)
     state = models.CharField(max_length=20, choices=State.choices)
     date = models.DateField()
+    amount = models.DecimalField(max_digits=20, decimal_places=2)
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.SET_NULL
     )
@@ -68,5 +70,7 @@ class Transaction(TimestampModel):
         related_name="transactions",
         blank=True,
     )
+
+    
 
 
