@@ -39,7 +39,7 @@ class Category(TimestampModel, OwnedModel):
         "self",
         blank=True,
         null=True,
-        related_name="subcategories",
+        related_name="subcategorie",
         on_delete=models.CASCADE,
     )   
 
@@ -61,7 +61,6 @@ class Transaction(TimestampModel):
     type = models.CharField(max_length=20, choices=Type.choices)
     state = models.CharField(max_length=20, choices=State.choices)
     date = models.DateField()
-    amount = models.DecimalField(max_digits=20, decimal_places=2)
     category = models.ForeignKey(
         Category, null=True, blank=True, on_delete=models.SET_NULL
     )
