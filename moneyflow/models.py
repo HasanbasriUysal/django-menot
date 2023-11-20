@@ -39,7 +39,7 @@ class Category(TimestampModel, OwnedModel):
         "self",
         blank=True,
         null=True,
-        related_name="children",
+        related_name="subcategories",
         on_delete=models.CASCADE,
     )
    
