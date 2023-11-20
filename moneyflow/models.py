@@ -29,7 +29,7 @@ class Document(TimestampModel, OwnedModel):
         OTHER = ("OTHER", _("Muu"))
 
     type = models.CharField(max_length=20, choices=Type.choices)
-    name = models.CharField(max_length=100,blank=True)
+    name = models.CharField(max_length=100,blank=True) 
     file = models.FileField(upload_to="docs/%Y-%M/")
     
 class Category(TimestampModel, OwnedModel):
