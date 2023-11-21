@@ -48,6 +48,9 @@ class Account(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100)
     bank_account = models.CharField(max_length=50, null=True, blank=True)
 
+    def __str__(self):
+        return f"{self.id:04d} {self.name}"
+
 
 class Transaction(TimestampModel):
     class Type(models.TextChoices):     
