@@ -32,7 +32,6 @@ class Document(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100,blank=True)
     file = models.FileField(upload_to="docs/%Y-%M/")
     
-    
 class Category(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey(
