@@ -133,7 +133,7 @@ class Transaction(TimestampModel):
     comment = models.CharField(
         max_length=200,
         blank=True,
-        verbose_name=_("komment"),        
+        verbose_name=_("kommentti"),        
     )
     category = models.ForeignKey(
         Category, 
