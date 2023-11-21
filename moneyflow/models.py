@@ -31,6 +31,9 @@ class Document(TimestampModel, OwnedModel):
     type = models.CharField(max_length=20, choices=Type.choices)
     name = models.CharField(max_length=100,blank=True)
     file = models.FileField(upload_to="docs/%Y-%M/")
+
+    def __str__(self):
+        return self.name if self.name else f"Document{self.id}"
     
 
 class Category(TimestampModel, OwnedModel):
@@ -42,6 +45,10 @@ class Category(TimestampModel, OwnedModel):
         related_name="subcategorie",
         on_delete=models.CASCADE,
     )   
+
+    def __str__(self):
+       prefix = f"{self.parent} / " if self.parent else ""
+       return f"{prefix}{self.name}"
 
 
 class Account(TimestampModel, OwnedModel):    
@@ -74,3 +81,7 @@ class Transaction(TimestampModel):
         related_name="transactions",
         blank=True,
     )
+
+    def __str__(self):
+        return f"{self.date} {self.account} {self.amount} ({self.state})"
+    
