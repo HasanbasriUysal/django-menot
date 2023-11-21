@@ -130,6 +130,11 @@ class Transaction(TimestampModel):
         decimal_places=2, 
         verbose_name = _("määrä"),
     )
+    comment = models.CharField(
+        max_length=200,
+        blank=True,
+        verbose_name=_("kommentti"),        
+    )
     category = models.ForeignKey(
         Category, 
         null=True, 
