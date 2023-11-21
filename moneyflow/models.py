@@ -32,6 +32,7 @@ class Document(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100,blank=True)
     file = models.FileField(upload_to="docs/%Y-%M/")
     
+
 class Category(TimestampModel, OwnedModel):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey(
@@ -41,6 +42,7 @@ class Category(TimestampModel, OwnedModel):
         related_name="subcategories",
         on_delete=models.CASCADE,
     )   
+
 
 class Account(TimestampModel, OwnedModel):    
     name = models.CharField(max_length=100)
@@ -69,9 +71,3 @@ class Transaction(TimestampModel):
         related_name="transactions",
         blank=True,
     )
-   
-
-
-    
-
-
