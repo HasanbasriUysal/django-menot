@@ -24,18 +24,26 @@
                     aria-expanded="false" 
                     aria-label="Näytä tai piilota navigaatioo">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+              </button>              
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">                  
+                    {% with url_name=request.revolver_match.url_name %}
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index'%}">Tilit</a>
+                    <a class="nav-link {% if url_name == 'accounts' %} active {% endif %}" 
+                    href="{% url 'accounts'%}"
+                    >Tilit</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'index'%}">Dokumentit</a>
+                    <a class="nav-link {% if url_name == 'documents' %} active {% endif %}" 
+                    href="{% url 'documents'%}"
+                    >Dokumentit</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'admin:index'%}">Ylläpito</a>
-                  </li>                    
+                    <a class="nav-link" 
+                    href="{% url 'admin:index'%}"
+                    >Ylläpito</a>
+                  </li>   
+                  {% endwith %}                 
                 </ul>
               </div>
             </div>

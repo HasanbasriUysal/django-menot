@@ -6,10 +6,21 @@ from .models import Account
 
 
 @login_required
-def frontpage(request):    
-    if request.user.is_anonymous:
-        return redirect(reverse("admin:login"), kwargs={"next":"/"})
+def frontpage(request):       
+        return render (request, "moneyflow/index.html")
+
+
+@login_required
+def accounts(request):    
     context = {
         "accounts": Account.objects.filter(owner=request.user),
     }
-    return render(request, "moneyflow/index.html", context)
+    return render(request, "moneyflow/accounts.html", context)
+
+
+@login_required
+def documents(request):     
+    context = {
+        "documents": Document.objects.filter(owner=request.user),
+    }
+    return render(request, "moneyflow/documents.html", context)
