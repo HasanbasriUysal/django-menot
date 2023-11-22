@@ -4,6 +4,8 @@ from django.urls import reverse
 
 from .models import Account
 
+
+@login_required
 def frontpage(request):    
     if request.user.is_anonymous:
         return redirect(reverse("admin:login"), kwargs={"next":"/"})
