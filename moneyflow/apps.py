@@ -5,4 +5,4 @@ from django.utils.translation import gettext_lazy as _
 class MoneyflowConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'moneyflow'
-    verbose_name = _("Rahavirrat")
+    verbose_name = _("Money Flows")
