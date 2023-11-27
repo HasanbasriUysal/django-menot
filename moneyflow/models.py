@@ -73,8 +73,17 @@ class Category(TimestampModel, OwnedModel):
         verbose_name = _("kategoria")
         verbose_name_plural = _("kategoriat")
 
-    def __str__(self):
-       prefix = f"{self.parent} / " if self.parent else ""
+    def __str__(self, level=0):
+       
+       # Varmista level-parametrilla, , etta syklit eivat aiheuta
+       # loputonta rekursiota
+       if self.parent and level < 20:
+           parent_str = self.parent.__str__(level=level + 1)
+       elif self.parent:
+           parent_str = "..."
+       else: 
+           parent_str = "..."
+       prefix = f"{parent_str} / " if parent_str else ""
        return f"{prefix}{self.name}"
 
 
