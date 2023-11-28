@@ -4,9 +4,10 @@
 {% block content %}
 
 <h1>{%translate "Accounts" %}</h1>
+
 <ul>
     {% for account in account_list %}
-    <li>{{account}}</li>
+    <li><a href ="{% url 'account-detail' account.pk %}">{{account}}</a></li>
     {% endfor %}
 </ul>
 
