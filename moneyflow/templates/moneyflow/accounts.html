@@ -1,8 +1,9 @@
 {% extends "moneyflow/base.html" %}
+{% load i18n %}
 
 {% block content %}
 
-<h1>Tilit</h1>
+<h1>{%translate "Accounts" %}</h1>
 <ul>
     {% for account in accounts %}
     <li>{{account}}</li>
