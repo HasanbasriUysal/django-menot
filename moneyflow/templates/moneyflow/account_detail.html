@@ -1,0 +1,10 @@
+{% extends "moneyflow/base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<h1>{%translate "Account" %} - {{ account }}</h1>
+
+Owner: {{ account.owner}}
+
+{% endblock %}

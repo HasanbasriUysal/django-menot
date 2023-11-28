@@ -1,8 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect, render
-from django.urls import reverse
-from django.views.generic import ListView
+from django.shortcuts import render
+from django.views.generic import DetailView, ListView
 
 from .models import Account, Document
 
@@ -12,12 +11,18 @@ def frontpage(request):
         return render (request, "moneyflow/index.html")
 
 
-class AccontsList(LoginRequiredMixin, ListView):
+class AccountView:
      model = Account
 
      def get_queryset(self):
-        return super().get_queryset().filter(owner=self.request.user)
-    
+         return super().get_queryset().filter(owner=self.request.user)
+
+class AccontsList(LoginRequiredMixin, AccountView, ListView):
+    pass
+
+
+class AccountDetail(LoginRequiredMixin, AccountView, DetailView):
+     pass     
 
 @login_required
 def documents(request):     
