@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-28 15:06+0200\n"
+"POT-Creation-Date: 2023-11-28 16:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,89 +46,106 @@ msgstr "Laskelma"
 msgid "Muu"
 msgstr ""
 
-#: .\moneyflow\models.py:38 .\moneyflow\models.py:124
+#: .\moneyflow\models.py:38 .\moneyflow\models.py:127
 msgid "type"
 msgstr "tyyppi"
 
-#: .\moneyflow\models.py:43 .\moneyflow\models.py:58 .\moneyflow\models.py:90
+#: .\moneyflow\models.py:43 .\moneyflow\models.py:61 .\moneyflow\models.py:93
 msgid "name"
 msgstr "nimi"
 
-#: .\moneyflow\models.py:45
+#: .\moneyflow\models.py:47
 msgid "file"
 msgstr "tiedosto"
 
-#: .\moneyflow\models.py:48
+#: .\moneyflow\models.py:51
 msgid "document"
 msgstr "dokumentti"
 
-#: .\moneyflow\models.py:49 .\moneyflow\models.py:154
+#: .\moneyflow\models.py:52 .\moneyflow\models.py:157
 msgid "documents"
 msgstr "dokumentit"
 
-#: .\moneyflow\models.py:66
+#: .\moneyflow\models.py:69
 msgid "parent category"
 msgstr "yläkategoria"
 
-#: .\moneyflow\models.py:70 .\moneyflow\models.py:149
+#: .\moneyflow\models.py:73 .\moneyflow\models.py:152
 msgid "category"
 msgstr "kategoria"
 
-#: .\moneyflow\models.py:71
+#: .\moneyflow\models.py:74
 msgid "categories"
 msgstr "kategoriat"
 
-#: .\moneyflow\models.py:96
+#: .\moneyflow\models.py:99
 msgid "bank account"
 msgstr "pankkitili"
 
-#: .\moneyflow\models.py:100 .\moneyflow\models.py:119
+#: .\moneyflow\models.py:103 .\moneyflow\models.py:122
 msgid "account"
 msgstr "tili"
 
-#: .\moneyflow\models.py:101
+#: .\moneyflow\models.py:104
 msgid "accounts"
 msgstr "tilit"
 
-#: .\moneyflow\models.py:109
+#: .\moneyflow\models.py:111
 msgid "Income"
 msgstr "Tulo"
 
-#: .\moneyflow\models.py:110
+#: .\moneyflow\models.py:112
 msgid "Expense"
 msgstr "Meno"
 
-#: .\moneyflow\models.py:113
+#: .\moneyflow\models.py:115
 msgid "Upcoming"
 msgstr "Tuleva"
 
-#: .\moneyflow\models.py:114
+#: .\moneyflow\models.py:116
 msgid "Done"
 msgstr "Tapahtunut"
 
-#: .\moneyflow\models.py:129
+#: .\moneyflow\models.py:132
 msgid "state"
 msgstr "tila"
 
-#: .\moneyflow\models.py:132
+#: .\moneyflow\models.py:135
 msgid "date"
 msgstr "päiväys"
 
-#: .\moneyflow\models.py:137
+#: .\moneyflow\models.py:140
 msgid "amount"
 msgstr "määrä"
 
-#: .\moneyflow\models.py:142
+#: .\moneyflow\models.py:145
 msgid "comment"
 msgstr "kommentti"
 
-#: .\moneyflow\models.py:158
+#: .\moneyflow\models.py:161
 msgid "transaction"
 msgstr "tilitapahtuma"
 
-#: .\moneyflow\models.py:159
+#: .\moneyflow\models.py:162
 msgid "transactions"
 msgstr "tilitapahtumat"
+
+#: .\moneyflow\templates\moneyflow\account_detail.html:6
+msgid "Account"
+msgstr "tilit"
+
+#: .\moneyflow\templates\moneyflow\account_detail.html:8
+msgid "Transactions"
+msgstr "Tilitapahtumat"
+
+#: .\moneyflow\templates\moneyflow\account_detail.html:16
+msgid "No transactions"
+msgstr "Ei tilitapahtumia"
+
+#: .\moneyflow\templates\moneyflow\account_list.html:6
+#: .\moneyflow\templates\moneyflow\base.html:38
+msgid "Accounts"
+msgstr "tilit"
 
 #: .\moneyflow\templates\moneyflow\base.html:4
 msgctxt "Language code for html lang attribute"
@@ -139,12 +156,8 @@ msgstr "fi"
 msgid "Toogle navigation visibility"
 msgstr "Näytä tai piilota navigaatio"
 
-#: .\moneyflow\templates\moneyflow\base.html:38
-msgid "Accounts"
-msgstr "tilit"
-
 #: .\moneyflow\templates\moneyflow\base.html:43
-#: .\moneyflow\templates\moneyflow\documents.html:5
+#: .\moneyflow\templates\moneyflow\documents.html:6
 msgid "Documents"
 msgstr "Dokumentit"
 

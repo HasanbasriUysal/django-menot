@@ -106,7 +106,6 @@ class Account(TimestampModel, OwnedModel):
     def __str__(self):
         return f"{self.id:04d} {self.name}"
 
-
 class Transaction(TimestampModel):
     class Type(models.TextChoices):     
         INCOME = ("INCOME", _("Income"))
@@ -119,6 +118,7 @@ class Transaction(TimestampModel):
     account = models.ForeignKey(
         Account,
         on_delete=models.RESTRICT, 
+        related_name="transaction", 
         verbose_name = _("account"),
     )
     type = models.CharField(

@@ -1,3 +1,4 @@
+from typing import Any
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
@@ -22,7 +23,12 @@ class AccontsList(LoginRequiredMixin, AccountView, ListView):
 
 
 class AccountDetail(LoginRequiredMixin, AccountView, DetailView):
-     pass     
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+         context = super().get_context_data(**kwargs)   
+         context["transaction"] = self.object.transactions.all()
+         return context
+    
+    transaction.account
 
 @login_required
 def documents(request):     
