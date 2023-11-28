@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-27 15:06+0200\n"
+"POT-Creation-Date: 2023-11-28 13:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\moneyflow\apps.py:8 .\moneyflow\templates\moneyflow\base.html:21
+#: .\moneyflow\apps.py:8
 msgid "Money Flows"
 msgstr "Rahavirrat"
 
 #: .\moneyflow\models.py:9
-#, fuzzy
-#| msgid "created_at"
 msgid "created at"
 msgstr "luotu"
 
@@ -125,47 +123,12 @@ msgid "comment"
 msgstr "kommentti"
 
 #: .\moneyflow\models.py:161
-#, fuzzy
-#| msgid "transactions"
 msgid "transaction"
-msgstr "tilitapahtumat"
+msgstr "tilitapahtuma"
 
 #: .\moneyflow\models.py:162
 msgid "transactions"
 msgstr "tilitapahtumat"
 
-#: .\moneyflow\templates\moneyflow\base.html:4
-msgctxt "Language code for html lang attribute"
-msgid "en"
-msgstr ""
-
-#: .\moneyflow\templates\moneyflow\base.html:29
-msgid "Toggle navigation visibility"
-msgstr ""
-
-#: .\moneyflow\templates\moneyflow\base.html:40
-#, fuzzy
-#| msgid "accounts"
-msgid "Accounts"
-msgstr "tilit"
-
-#: .\moneyflow\templates\moneyflow\base.html:47
-#, fuzzy
-#| msgid "documents"
-msgid "Documents"
-msgstr "dokumentit"
-
-#: .\moneyflow\templates\moneyflow\base.html:53
-msgctxt "navigation"
-msgid "Administration"
-msgstr ""
-
-#: .\moneyflow\templates\moneyflow\base.html:64
-msgid "Log out"
-msgstr ""
-
 #~ msgid "Other"
 #~ msgstr "Muu"
-
-#~ msgid "translation"
-#~ msgstr "tilitapahtuma"
