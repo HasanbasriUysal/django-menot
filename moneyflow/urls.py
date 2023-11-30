@@ -10,5 +10,5 @@ urlpatterns = [
         views.AccountDetail.as_view(),
         name="accounts-detail",
     ),
-    path("dokumentit/", views.documents, name="documents"),
+    path("dokumentit/", views.DocumentList.as_view(), name="documents"),
 ]
