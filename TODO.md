@@ -7,7 +7,7 @@
 
 * [X] Uloskirjautumislinkki
 
-* [ ] Documentin detail-näkymä
+* [X] Documentin detail-näkymä
 
 * [ ] Peruskategoriat
     - Uuden käyttäjän luonnin jälkeen pitaisi pystyä tekemään hänelle
