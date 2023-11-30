@@ -1,13 +1,13 @@
-{%extends "moneyflow/base.html" %}
+{% extends "moneyflow/base.html" %}
 {% load i18n %}
 
 {% block content %}
 
-<h1>{%translate "Documents" %}</h1>
+<h1>{% translate "Documents" %}</h1>
 
 <ul>
     {% for doc in document_list %}
-    <li>{{doc}}</li>
+    <li><a href="{% url 'document-detail' doc.pk %}">{{doc}}</a></li>
     {% endfor %}
 </ul>
 
