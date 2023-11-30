@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 13:18+0200\n"
+"POT-Creation-Date: 2023-11-30 13:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -169,6 +169,12 @@ msgstr "Ylläpito"
 #: .\moneyflow\templates\moneyflow\base.html:64
 msgid "Log out"
 msgstr "Kirjaudu ulos"
+
+#: .\moneyflow\templates\moneyflow\document_detail.html:6
+#, fuzzy
+#| msgid "Documents"
+msgid "Document"
+msgstr "Dokumentit"
 
 #: .\moneyflow\templates\moneyflow\index.html:6
 msgid "Welcome!"
