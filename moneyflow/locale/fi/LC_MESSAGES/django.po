@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 11:36+0200\n"
+"POT-Creation-Date: 2023-11-30 13:18+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr "Laskelma"
 
 #: .\moneyflow\models.py:33
 msgid "Other"
-msgstr ""
+msgstr "Muu"
 
 #: .\moneyflow\models.py:38 .\moneyflow\models.py:127
 msgid "type"
@@ -132,7 +132,7 @@ msgstr "tilitapahtumat"
 
 #: .\moneyflow\templates\moneyflow\account_detail.html:6
 msgid "Account"
-msgstr "tilit"
+msgstr "Tili"
 
 #: .\moneyflow\templates\moneyflow\account_detail.html:8
 msgid "Transactions"
@@ -145,7 +145,7 @@ msgstr "Ei tilitapahtumia"
 #: .\moneyflow\templates\moneyflow\account_list.html:6
 #: .\moneyflow\templates\moneyflow\base.html:40
 msgid "Accounts"
-msgstr "tilit"
+msgstr "Tilit"
 
 #: .\moneyflow\templates\moneyflow\base.html:4
 msgctxt "Language code for html lang attribute"
@@ -153,8 +153,6 @@ msgid "en"
 msgstr "fi"
 
 #: .\moneyflow\templates\moneyflow\base.html:29
-#, fuzzy
-#| msgid "Toogle navigation visibility"
 msgid "Toggle navigation visibility"
 msgstr "Näytä tai piilota navigaatio"
 
@@ -166,11 +164,11 @@ msgstr "Dokumentit"
 #: .\moneyflow\templates\moneyflow\base.html:53
 msgctxt "navigation"
 msgid "Administration"
-msgstr "ylläpito"
+msgstr "Ylläpito"
 
 #: .\moneyflow\templates\moneyflow\base.html:64
 msgid "Log out"
-msgstr ""
+msgstr "Kirjaudu ulos"
 
 #: .\moneyflow\templates\moneyflow\index.html:6
 msgid "Welcome!"
