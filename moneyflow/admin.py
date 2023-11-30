@@ -32,6 +32,3 @@ class TransactionAdmin(ModelAdmin):
         "comment",
     ]
     list_display_links = list_display
-
-
-
