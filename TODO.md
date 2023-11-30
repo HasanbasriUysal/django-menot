@@ -1,30 +1,29 @@
-# TODO
 
-## DONE: Käännöstiedostot
+* [X] Käännöstiedostot
 
-## DONE: Muunna Document-lista käyttämään class-based-viewejä
+* [X] Muunna Document-lista käyttämään class-based-viewejä
 
-## TODO: Kirjautuminen tavallisena käyttäjänä
+* [X] Kirjautuminen tavallisena käyttäjänä
 
-## TODO: Uloskirjautumislinkki
+* [X] Uloskirjautumislinkki
 
-## TODO: Documentin detail-näkymä
+* [ ] Documentin detail-näkymä
 
-## TODO: Peruskategoriat
+* [ ] Peruskategoriat
     - Uuden käyttäjän luonnin jälkeen pitaisi pystyä tekemään hänelle
     peruskategoriat, jotta ei tarvi aina tehdä niitä uudelleen.
     - Lisäksi tämä auttaisi kun projetin tietokannan luo uudelleen.
 
-## TODO: Kielen vaihtaminen käyttöliittymästä
+* [ ] Kielen vaihtaminen käyttöliittymästä
 
-## TODO: Tilin luominen käyttöliittymästä
+* [ ] Tilin luominen käyttöliittymästä
 
-## TODO: Tilin poistaminen käyttöliittymästä
+* [ ] Tilin poistaminen käyttöliittymästä
 
-## TODO: Tilitapahtuman luominen käyttöliittymästä
+* [ ] Tilitapahtuman luominen käyttöliittymästä
 
-## TODO: Tilitapahtuman muokkaus käyttöliittymästä
+* [ ] Tilitapahtuman muokkaus käyttöliittymästä
 
-## TODO: Tiedostojen lataamisen tietoturva
+* [ ] Tiedostojen lataamisen tietoturva
     - Älä päästä lataamaan toisen käyttäjän laskuja tai muita dokumentteja
     - Voidaan toteuttaa esim. tekemällä tiedostojen polut sellaisiksi että niitä ei voi arvata (esim. riittävät pitkä random-teksti osaksi polkua)
