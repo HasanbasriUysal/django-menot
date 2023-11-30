@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-28 16:15+0200\n"
+"POT-Creation-Date: 2023-11-30 11:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,14 +43,14 @@ msgid "Calculation"
 msgstr "Laskelma"
 
 #: .\moneyflow\models.py:33
-msgid "Muu"
+msgid "Other"
 msgstr ""
 
 #: .\moneyflow\models.py:38 .\moneyflow\models.py:127
 msgid "type"
 msgstr "tyyppi"
 
-#: .\moneyflow\models.py:43 .\moneyflow\models.py:61 .\moneyflow\models.py:93
+#: .\moneyflow\models.py:43 .\moneyflow\models.py:61 .\moneyflow\models.py:92
 msgid "name"
 msgstr "nimi"
 
@@ -62,7 +62,7 @@ msgstr "tiedosto"
 msgid "document"
 msgstr "dokumentti"
 
-#: .\moneyflow\models.py:52 .\moneyflow\models.py:157
+#: .\moneyflow\models.py:52 .\moneyflow\models.py:158
 msgid "documents"
 msgstr "dokumentit"
 
@@ -78,15 +78,15 @@ msgstr "kategoria"
 msgid "categories"
 msgstr "kategoriat"
 
-#: .\moneyflow\models.py:99
+#: .\moneyflow\models.py:98
 msgid "bank account"
 msgstr "pankkitili"
 
-#: .\moneyflow\models.py:103 .\moneyflow\models.py:122
+#: .\moneyflow\models.py:102 .\moneyflow\models.py:122
 msgid "account"
 msgstr "tili"
 
-#: .\moneyflow\models.py:104
+#: .\moneyflow\models.py:103
 msgid "accounts"
 msgstr "tilit"
 
@@ -122,11 +122,11 @@ msgstr "määrä"
 msgid "comment"
 msgstr "kommentti"
 
-#: .\moneyflow\models.py:161
+#: .\moneyflow\models.py:162
 msgid "transaction"
 msgstr "tilitapahtuma"
 
-#: .\moneyflow\models.py:162
+#: .\moneyflow\models.py:163
 msgid "transactions"
 msgstr "tilitapahtumat"
 
@@ -143,7 +143,7 @@ msgid "No transactions"
 msgstr "Ei tilitapahtumia"
 
 #: .\moneyflow\templates\moneyflow\account_list.html:6
-#: .\moneyflow\templates\moneyflow\base.html:38
+#: .\moneyflow\templates\moneyflow\base.html:40
 msgid "Accounts"
 msgstr "tilit"
 
@@ -153,18 +153,24 @@ msgid "en"
 msgstr "fi"
 
 #: .\moneyflow\templates\moneyflow\base.html:29
-msgid "Toogle navigation visibility"
+#, fuzzy
+#| msgid "Toogle navigation visibility"
+msgid "Toggle navigation visibility"
 msgstr "Näytä tai piilota navigaatio"
 
-#: .\moneyflow\templates\moneyflow\base.html:43
-#: .\moneyflow\templates\moneyflow\documents.html:6
+#: .\moneyflow\templates\moneyflow\base.html:47
+#: .\moneyflow\templates\moneyflow\documents_list.html:6
 msgid "Documents"
 msgstr "Dokumentit"
 
-#: .\moneyflow\templates\moneyflow\base.html:48
+#: .\moneyflow\templates\moneyflow\base.html:53
 msgctxt "navigation"
 msgid "Administration"
 msgstr "ylläpito"
+
+#: .\moneyflow\templates\moneyflow\base.html:64
+msgid "Log out"
+msgstr ""
 
 #: .\moneyflow\templates\moneyflow\index.html:6
 msgid "Welcome!"
