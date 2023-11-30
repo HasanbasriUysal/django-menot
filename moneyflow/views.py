@@ -7,31 +7,31 @@ from .models import Account, Document
 
 
 @login_required
-def frontpage(request):       
-        return render (request, "moneyflow/index.html")
+def frontpage(request):
+    return render(request, "moneyflow/index.html")
 
 
 class OwnerFilteredMixin(LoginRequiredMixin):
-     def get_queryset(self):
-        super_vastaus = super().get_queryset()
-        
-        return super_vastaus.filter(owner=self.request.user)
+    def get_queryset(self):
+        return super().get_queryset().filter(owner=self.request.user)
 
 
-class AccontsList(OwnerFilteredMixin, ListView):
+class AccountList(OwnerFilteredMixin, ListView):
     model = Account
-    
+
 
 class AccountDetail(OwnerFilteredMixin, DetailView):
     model = Account
 
     def get_context_data(self, **kwargs):
-         context = super().get_context_data(**kwargs)   
-         context["transaction"] = self.object.transactions.all()
-         return context
-    
+        context = super().get_context_data(**kwargs)
+        context["transactions"] = self.object.transactions.all()
+        return context
 
-class DocumentList(OwnerFilteredMixin,ListView):
-     model = Document
 
-    
+class DocumentList(OwnerFilteredMixin, ListView):
+    model = Document
+
+
+class DocumentDetail(OwnerFilteredMixin, DetailView):
+    model = Document
