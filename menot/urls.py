@@ -25,5 +25,5 @@ import users.urls
 urlpatterns = [
     path("", include(moneyflow.urls)),
     path("kayttajatilit/", include(users.urls)),
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

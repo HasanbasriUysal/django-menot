@@ -5,6 +5,10 @@
 
 <h1>{% translate "Categories" %}</h1>
 
+<div class="btn-group m-3" role="group">
+    <a href="{% url 'category-new' %}" class="btn btn-primary">Lisää uusi</a>
+</div>
+
 <ul>
     {% for category in category_list %}
     <li><a href="{% url 'category-detail' category.pk %}">{{category}}</a></li>

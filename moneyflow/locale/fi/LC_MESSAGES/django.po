@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-30 13:29+0200\n"
+"POT-Creation-Date: 2023-12-04 10:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,22 +157,29 @@ msgid "Toggle navigation visibility"
 msgstr "Näytä tai piilota navigaatio"
 
 #: .\moneyflow\templates\moneyflow\base.html:47
-#: .\moneyflow\templates\moneyflow\documents_list.html:6
+#: .\moneyflow\templates\moneyflow\document_list.html:6
 msgid "Documents"
 msgstr "Dokumentit"
 
-#: .\moneyflow\templates\moneyflow\base.html:53
+#: .\moneyflow\templates\moneyflow\base.html:54
+#: .\moneyflow\templates\moneyflow\category_list.html:6
+msgid "Categories"
+msgstr "Kategoriat"
+
+#: .\moneyflow\templates\moneyflow\base.html:60
 msgctxt "navigation"
 msgid "Administration"
 msgstr "Ylläpito"
 
-#: .\moneyflow\templates\moneyflow\base.html:64
+#: .\moneyflow\templates\moneyflow\base.html:71
 msgid "Log out"
 msgstr "Kirjaudu ulos"
 
+#: .\moneyflow\templates\moneyflow\category_detail.html:6
+msgid "Category"
+msgstr "Kategoria"
+
 #: .\moneyflow\templates\moneyflow\document_detail.html:6
-#, fuzzy
-#| msgid "Documents"
 msgid "Document"
 msgstr "Dokumentit"
 

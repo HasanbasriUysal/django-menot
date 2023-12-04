@@ -12,8 +12,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="transaction",
             name="comment",
-            field=models.CharField(
-                blank=True, max_length=200, verbose_name="komment"
-                ),
+            field=models.CharField(blank=True, max_length=200, verbose_name="komment"),
         ),
     ]

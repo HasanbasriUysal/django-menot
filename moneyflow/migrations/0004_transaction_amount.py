@@ -5,26 +5,34 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('moneyflow', '0003_account_created_at_category_created_at_document_name_and_more'),
+        (
+            "moneyflow",
+            "0003_account_created_at_category_created_at_document_name_and_more",
+        ),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='document',
-            name='name',
+            model_name="document",
+            name="name",
             field=models.CharField(blank=True, max_length=100),
         ),
         migrations.AddField(
-            model_name='transaction',
-            name='amount',
+            model_name="transaction",
+            name="amount",
             field=models.DecimalField(decimal_places=2, default=0, max_digits=20),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='category',
-            name='parent',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='subcategories', to='moneyflow.category'),
+            model_name="category",
+            name="parent",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="subcategories",
+                to="moneyflow.category",
+            ),
         ),
     ]

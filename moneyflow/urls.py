@@ -16,10 +16,15 @@ urlpatterns = [
         views.DocumentDetail.as_view(),
         name="document-detail",
     ),
-     path("kategoriat/", views.CategoryList.as_view(), name="categories"),
+    path("kategoriat/", views.CategoryList.as_view(), name="categories"),
     path(
         "kategoriat/<int:pk>/",
         views.CategoryDetail.as_view(),
         name="category-detail",
+    ),
+    path(
+        "kategoriat/uusi/",
+        views.CategoryCreate.as_view(),
+        name="category-new",
     ),
 ]
