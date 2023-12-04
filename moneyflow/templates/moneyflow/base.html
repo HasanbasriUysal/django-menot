@@ -47,6 +47,13 @@
                                 >{% translate "Documents" %}</a
                             >
                         </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link {% if url_name == 'categories' %}active{% endif %}"
+                                href="{% url 'categories' %}"
+                                >{% translate "Categories" %}</a
+                            >
+                        </li>
                         {% if user.is_staff %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'admin:index' %}"
