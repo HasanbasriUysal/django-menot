@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 10:46+0200\n"
+"POT-Creation-Date: 2023-12-11 14:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,111 +22,136 @@ msgstr ""
 msgid "Money Flows"
 msgstr "Rahavirrat"
 
-#: .\moneyflow\models.py:9
+#: .\moneyflow\models.py:11
 msgid "created at"
 msgstr "luotu"
 
-#: .\moneyflow\models.py:20
+#: .\moneyflow\models.py:22
 msgid "owner"
 msgstr "omistaja"
 
-#: .\moneyflow\models.py:30
+#: .\moneyflow\models.py:32
 msgid "Bill"
 msgstr "Lasku"
 
-#: .\moneyflow\models.py:31
+#: .\moneyflow\models.py:33
 msgid "Receipt"
 msgstr "Kuitti"
 
-#: .\moneyflow\models.py:32
+#: .\moneyflow\models.py:34
 msgid "Calculation"
 msgstr "Laskelma"
 
-#: .\moneyflow\models.py:33
+#: .\moneyflow\models.py:35
 msgid "Other"
 msgstr "Muu"
 
-#: .\moneyflow\models.py:38 .\moneyflow\models.py:127
+#: .\moneyflow\models.py:40 .\moneyflow\models.py:153
 msgid "type"
 msgstr "tyyppi"
 
-#: .\moneyflow\models.py:43 .\moneyflow\models.py:61 .\moneyflow\models.py:92
+#: .\moneyflow\models.py:45 .\moneyflow\models.py:63 .\moneyflow\models.py:118
 msgid "name"
 msgstr "nimi"
 
-#: .\moneyflow\models.py:47
+#: .\moneyflow\models.py:49
 msgid "file"
 msgstr "tiedosto"
 
-#: .\moneyflow\models.py:51
+#: .\moneyflow\models.py:53
 msgid "document"
 msgstr "dokumentti"
 
-#: .\moneyflow\models.py:52 .\moneyflow\models.py:158
+#: .\moneyflow\models.py:54 .\moneyflow\models.py:184
 msgid "documents"
 msgstr "dokumentit"
 
-#: .\moneyflow\models.py:69
+#: .\moneyflow\models.py:71
 msgid "parent category"
 msgstr "yläkategoria"
 
-#: .\moneyflow\models.py:73 .\moneyflow\models.py:152
+#: .\moneyflow\models.py:75 .\moneyflow\models.py:178
 msgid "category"
 msgstr "kategoria"
 
-#: .\moneyflow\models.py:74
+#: .\moneyflow\models.py:76
 msgid "categories"
 msgstr "kategoriat"
 
+#: .\moneyflow\models.py:95
+#, fuzzy
+#| msgid "Expense"
+msgid "Expenses"
+msgstr "Meno"
+
+#: .\moneyflow\models.py:96
+msgid "Living Costs"
+msgstr ""
+
+#: .\moneyflow\models.py:97
+msgid "Food"
+msgstr ""
+
 #: .\moneyflow\models.py:98
-msgid "bank account"
-msgstr "pankkitili"
-
-#: .\moneyflow\models.py:102 .\moneyflow\models.py:122
-msgid "account"
-msgstr "tili"
-
-#: .\moneyflow\models.py:103
-msgid "accounts"
-msgstr "tilit"
-
-#: .\moneyflow\models.py:111
+#, fuzzy
+#| msgid "Income"
+msgctxt "category name"
 msgid "Income"
 msgstr "Tulo"
 
-#: .\moneyflow\models.py:112
+#: .\moneyflow\models.py:99
+msgid "Salary"
+msgstr ""
+
+#: .\moneyflow\models.py:124
+msgid "bank account"
+msgstr "pankkitili"
+
+#: .\moneyflow\models.py:128 .\moneyflow\models.py:148
+msgid "account"
+msgstr "tili"
+
+#: .\moneyflow\models.py:129
+msgid "accounts"
+msgstr "tilit"
+
+#: .\moneyflow\models.py:137
+msgid "Income"
+msgstr "Tulo"
+
+#: .\moneyflow\models.py:138
 msgid "Expense"
 msgstr "Meno"
 
-#: .\moneyflow\models.py:115
+#: .\moneyflow\models.py:141
 msgid "Upcoming"
 msgstr "Tuleva"
 
-#: .\moneyflow\models.py:116
+#: .\moneyflow\models.py:142
 msgid "Done"
 msgstr "Tapahtunut"
 
-#: .\moneyflow\models.py:132
+#: .\moneyflow\models.py:158
 msgid "state"
 msgstr "tila"
 
-#: .\moneyflow\models.py:135
+#: .\moneyflow\models.py:161
 msgid "date"
 msgstr "päiväys"
 
-#: .\moneyflow\models.py:140
+#: .\moneyflow\models.py:166
 msgid "amount"
 msgstr "määrä"
 
-#: .\moneyflow\models.py:145
+#: .\moneyflow\models.py:171
 msgid "comment"
 msgstr "kommentti"
 
-#: .\moneyflow\models.py:162
+#: .\moneyflow\models.py:188
 msgid "transaction"
 msgstr "tilitapahtuma"
 
-#: .\moneyflow\models.py:163
+#: .\moneyflow\models.py:189
 msgid "transactions"
 msgstr "tilitapahtumat"
 
@@ -175,9 +200,57 @@ msgstr "Ylläpito"
 msgid "Log out"
 msgstr "Kirjaudu ulos"
 
+#: .\moneyflow\templates\moneyflow\category_confirm_delete.html:7
+msgid "Delete Category"
+msgstr "Kategoria"
+
+#: .\moneyflow\templates\moneyflow\category_confirm_delete.html:11
+#, python-format
+msgid ""
+"\n"
+"        Are you sure you want to delete \"%(category)s\"?\n"
+"        "
+msgstr ""
+
+#: .\moneyflow\templates\moneyflow\category_create_defaults_form.html:6
+#: .\moneyflow\templates\moneyflow\category_list.html:12
+msgid "Create Default Categories"
+msgstr ""
+
+#: .\moneyflow\templates\moneyflow\category_create_defaults_form.html:12
+msgid ""
+"\n"
+"        Do you really want to create the default categories?\n"
+"        "
+msgstr ""
+
+#: .\moneyflow\templates\moneyflow\category_create_defaults_form.html:19
+msgid "Create"
+msgstr "luotu"
+
+#: .\moneyflow\templates\moneyflow\category_create_defaults_form.html:23
+msgid "Cancel"
+msgstr ""
+
 #: .\moneyflow\templates\moneyflow\category_detail.html:6
 msgid "Category"
 msgstr "Kategoria"
+
+#: .\moneyflow\templates\moneyflow\category_detail.html:9
+msgid "Delete"
+msgstr ""
+
+#: .\moneyflow\templates\moneyflow\category_form.html:7
+msgid "New Category"
+msgstr "Kategoria"
+
+#: .\moneyflow\templates\moneyflow\category_form.html:14
+msgid "Save"
+msgstr ""
+
+#: .\moneyflow\templates\moneyflow\category_list.html:10
+msgid "Create New Category"
+msgstr "yläkategoria"
 
 #: .\moneyflow\templates\moneyflow\document_detail.html:6
 msgid "Document"

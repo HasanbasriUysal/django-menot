@@ -23,8 +23,18 @@ urlpatterns = [
         name="category-detail",
     ),
     path(
+        "kategoriat/poista/<int:pk>/",
+        views.CategoryDelete.as_view(),
+        name="category-delete",
+    ),
+    path(
         "kategoriat/uusi/",
         views.CategoryCreate.as_view(),
         name="category-new",
+    ),
+    path(
+        "kategoriat/luo-oletuskategoriat/",
+        views.CreateDefaultCategoriesFormView.as_view(),
+        name="category-create-defaults",
     ),
 ]

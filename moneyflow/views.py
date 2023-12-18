@@ -1,7 +1,9 @@
+from django import forms
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
-from django.views.generic import CreateView, DetailView, ListView
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView, FormView, ListView, DeleteView
 
 from .models import Account, Category, Document
 
@@ -56,3 +58,22 @@ class CategoryDetail(OwnerFilteredMixin, DetailView):
 class CategoryCreate(OwnerAutoFillingCreateView):
     model = Category
     fields = ["name", "parent"]
+
+
+class CategoryDelete(OwnerFilteredMixin, DeleteView):
+    model = Category
+    success_url = reverse_lazy("categories")
+
+
+class CreateDefaultCategoriesForm(forms.Form):
+    pass
+
+
+class CreateDefaultCategoriesFormView(FormView):
+    form_class = CreateDefaultCategoriesForm
+    template_name = "moneyflow/category_create_defaults_form.html"
+    success_url = reverse_lazy("categories")
+
+    def form_valid(self, form):
+        Category.create_defaults(owner=self.request.user)
+        return super().form_valid(form)
